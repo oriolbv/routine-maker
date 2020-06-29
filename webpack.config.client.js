@@ -26,10 +26,10 @@ const config = {
                 ]
             }
         ]
-    }, plugins: [
+    },  plugins: [
           new webpack.HotModuleReplacementPlugin(),
           new webpack.NoEmitOnErrorsPlugin()
-    ]
+      ]
 }
 
 module.exports = config

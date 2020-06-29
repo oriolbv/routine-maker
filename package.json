@@ -1,16 +1,31 @@
 {
-  "name": "routine-maker",
+  "name": "mern-simplesetup",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A quick check for your MERN stack installation",
+  "author": "Shama Hoque",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "node",
+    "express",
+    "mongodb",
+    "mern"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shamahoque/mern-simplesetup.git"
+  },
+  "homepage": "https://github.com/shamahoque/mern-simplesetup",
+  "main": "template.js",
   "scripts": {
     "development": "nodemon",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "NODE_ENV=production node ./dist/server.generated.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node ./dist/server.generated.js"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "8.11.1",
+    "npm": "5.8.0"
+  },
   "dependencies": {
     "express": "^4.16.3",
     "mongodb": "^3.0.7",
@@ -25,8 +40,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "nodemon": "^1.17.3",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-middleware": "^3.1.2",
     "webpack-hot-middleware": "^2.22.1",
     "webpack-node-externals": "^1.7.2"
