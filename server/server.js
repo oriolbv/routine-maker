@@ -1,11 +1,15 @@
 import path from 'path'
 import express from 'express'
-import { MongoClient } from 'mongodb'
+import config from './../config/config'
+import app from './express'
 import template from './../template'
 //comment out before building for production
 import devBundle from './devBundle'
 
-const app = express()
+// MongoDB
+import { MongoClient } from 'mongodb'
+import mongoose from 'mongoose'
+
 //comment out before building for production
 devBundle.compile(app)
 
@@ -30,4 +34,11 @@ const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/mernSimpleSetu
 MongoClient.connect(url, (err, db)=>{
   console.log("Connected successfully to mongodb server")
   db.close()
+})
+
+mongoose.Promise = global.Promise
+mongoose.connect(config.mongoUri)
+
+mongoose.connection.on('error', () => {
+  throw new Error(`unable to connect to database: ${mongoUri}`)
 })
