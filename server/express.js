@@ -5,6 +5,8 @@ import compress from 'compression'
 import cors from 'cors'
 import helmet from 'helmet'
 
+import Template from './../template'
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -16,3 +18,7 @@ app.use(helmet())
 app.use(cors())
 
 export default app
+
+app.get('/', (req, res) => {
+    res.status(200).send(Template())
+})
