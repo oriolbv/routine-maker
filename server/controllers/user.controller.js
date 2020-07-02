@@ -26,8 +26,24 @@ const list = (req, res) => {
       res.json(users)
     }).select('name email updated created')
   }
-const userByID = (req, res, next, id) => {  }
-const read = (req, res) => {  }
+
+const userByID = (req, res, next, id) => {
+    User.findById(id).exec((err, user) => {
+        if (err || !user)
+            return res.status('400').json({
+                error: "User not found"
+            })
+        req.profile = user
+        next()
+    })
+}
+
+const read = (req, res) => {
+    req.profile.hashed_password = undefined
+    req.profile.salt = undefined
+    return res.json(req.profile)
+}
+
 const update = (req, res, next) => {  }
 const remove = (req, res, next) => {  }
 
