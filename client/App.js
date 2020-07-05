@@ -4,6 +4,8 @@ import React from 'react'
 import MainRouter from './MainRouter'
 import {BrowserRouter} from 'react-router-dom'
 
+import { hot } from 'react-hot-loader'
+
 const theme = createMuiTheme({
     palette: {
         primary: {
@@ -31,3 +33,5 @@ const App = () => (
     </MuiThemeProvider>
   </BrowserRouter>
 )
+
+export default hot(module)(App)
