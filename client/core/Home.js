@@ -21,9 +21,6 @@ const styles = theme => ({
     }
 }) 
 
-Home.propTypes = {
-    classes: PropTypes.object.isRequired
-}
 
 class Home extends Component {
     render() {
@@ -47,5 +44,9 @@ class Home extends Component {
         )
     }
   }
+  
+Home.propTypes = {
+    classes: PropTypes.object.isRequired
+}
 
-  export default withStyles(styles)(Home)
+export default withStyles(styles)(Home)
