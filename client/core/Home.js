@@ -21,6 +21,10 @@ const styles = theme => ({
     }
 }) 
 
+Home.propTypes = {
+    classes: PropTypes.object.isRequired
+}
+
 class Home extends Component {
     render() {
         const {classes} = this.props 
@@ -43,3 +47,5 @@ class Home extends Component {
         )
     }
   }
+
+  export default withStyles(styles)(Home)
