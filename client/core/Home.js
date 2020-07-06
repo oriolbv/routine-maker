@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {withStyles} from 'material-ui/styles'
 import Card, {CardContent, CardMedia} from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
-// import gymImg from './../assets/images/gym.jpg'
+import gymImg from './../assets/images/gym.jpg'
 
 const styles = theme => ({
     card: {
@@ -35,8 +35,8 @@ class Home extends Component {
                     {classes.title}>
                     Home Page
                     </Typography>
-                    {/* <CardMedia className={classes.media} image={seashellImg} 
-                    title="Unicorn Shells"/> */}
+                    <CardMedia className={classes.media} image={gymImg} 
+                    title="Gym Routine Maker"/>
                     <CardContent>
                     <Typography type="body1" component="p">
                         Welcome to the Mern Skeleton home page
