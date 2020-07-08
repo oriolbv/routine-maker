@@ -8,7 +8,8 @@ class MainRouter extends Component {
     return (<div>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/users" component={props => <Users {...props} />} />
+        <Route exact path="/users" component={Users}/>
+        {/* <Route exact path="/users" component={props => <Users {...props} />} /> */}
       </Switch>
     </div>)
   }
