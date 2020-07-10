@@ -30,6 +30,8 @@ class Home extends React.Component {
             <div>
                 <Card className={classes.card}>
                     <Link to="/users">Users</Link>
+                    <Link to="/signup">Signup</Link>
+
                     <Typography type="headline" component="h2" className=
                     {classes.title}>
                     Home Page
