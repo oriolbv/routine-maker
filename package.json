@@ -27,6 +27,9 @@
     "npm": "5.8.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.10.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
@@ -36,8 +39,6 @@
     "helmet": "^3.23.3",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
-    "material-ui": "^1.0.0-beta.43",
-    "material-ui-icons": "^1.0.0-beta.36",
     "mongodb": "^3.0.7",
     "mongoose": "^5.9.20",
     "react": "^16.13.1",

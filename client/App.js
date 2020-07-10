@@ -1,5 +1,7 @@
-import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles'
-import {indigo, pink} from 'material-ui/colors'
+// import {MuiThemeProvider, createMuiTheme} from '@material-ui/styles'
+// import {indigo, pink} from '@material-ui/core/colors'
+// import {brown500, brown900} from '@material-ui/styles/colors';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import React from 'react'
 import MainRouter from './MainRouter'
 import {BrowserRouter} from 'react-router-dom'
@@ -20,8 +22,7 @@ const theme = createMuiTheme({
         dark: '#c60055',
         contrastText: '#000',
     },
-        openTitle: indigo['400'],
-        protectedTitle: pink['400'],
+        
         type: 'light'
     }
 })
