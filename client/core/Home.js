@@ -35,6 +35,7 @@ class Home extends React.Component {
                     
                     <ButtonGroup color="primary" aria-label="outlined primary button group">         
                         <Button><Link to="/users">Users</Link></Button>
+                        <Button><Link to="/signin">Sign in</Link></Button>
                         <Button><Link to="/signup">Sign up</Link></Button>
                     </ButtonGroup>
                     <Typography type="headline" component="h2" className={classes.title}>
