@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Route, Switch} from 'react-router-dom'
+import Menu from '@material-ui/core/Menu'
 import Home from './core/Home'
 import Users from './user/Users'
 import Signup from './user/Signup'
@@ -9,6 +10,7 @@ import Profile from './user/Profile'
 class MainRouter extends Component {
   render() {
     return (<div>
+      <Menu/>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/users" component={Users}/>
