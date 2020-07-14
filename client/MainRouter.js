@@ -7,16 +7,19 @@ import Signup from './user/Signup'
 import Signin from './auth/Signin'
 import Profile from './user/Profile'
 
+import Routines from './routines/Routines'
+
 class MainRouter extends Component {
   render() {
     return (<div>
       <Menu/>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/users" component={Users}/>
-        <Route path="/signup" component={Signup}/>
-        <Route path="/signin" component={Signin}/>
-        <Route path="/user/:userId" component={Profile}/>
+          <Route exact path="/" component={Home}/>
+          <Route path="/users" component={Users}/>
+          <Route path="/signup" component={Signup}/>
+          <Route path="/signin" component={Signin}/>
+          <Route path="/user/:userId" component={Profile}/>
+          <Route path="/routines" component={Routines}/>   
       </Switch>
     </div>)
   }
