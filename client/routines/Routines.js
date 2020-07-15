@@ -23,26 +23,22 @@ const styles = theme => ({
 })
 
 class Routines extends Component {
-    state = {
-        routines: []
-    }
+   
 
   render() {
-        const {classes} = this.props
         return (
-        <Paper className={classes.root} elevation={4}>
-            <Typography type="title" className={classes.title}>
+        <Paper>
+            <Typography type="title">
             All Routines
             </Typography>
                 
         
         </Paper>
+
+        
         )
     }
 }
 
-// Users.propTypes = {
-//   classes: PropTypes.object.isRequired
-// }
 
-// export default withStyles(styles)(Users)
+export default withStyles(styles)(Routines)
