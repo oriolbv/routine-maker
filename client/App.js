@@ -1,38 +1,23 @@
-// import {MuiThemeProvider, createMuiTheme} from '@material-ui/styles'
-// import {indigo, pink} from '@material-ui/core/colors'
-// import {brown500, brown900} from '@material-ui/styles/colors';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import React from 'react'
 import MainRouter from './MainRouter'
 import {BrowserRouter} from 'react-router-dom'
-
+import { ThemeProvider } from '@material-ui/styles'
+import theme from './theme'
 import { hot } from 'react-hot-loader'
 
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-        light: '#757de8',
-        main: '#3f51b5',
-        dark: '#002984',
-        contrastText: '#fff',
-    },
-    secondary: {
-        light: '#ff79b0',
-        main: '#ff4081',
-        dark: '#c60055',
-        contrastText: '#000',
-    },
-        
-        type: 'light'
+const App = () => {
+  React.useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles);
     }
-})
-
-const App = () => (
+  }, []);
+  return (
   <BrowserRouter>
-    <MuiThemeProvider theme={theme}>
-      <MainRouter/>
-    </MuiThemeProvider>
+      <ThemeProvider theme={theme}>
+        <MainRouter/>
+      </ThemeProvider>
   </BrowserRouter>
-)
+)}
 
 export default hot(module)(App)
