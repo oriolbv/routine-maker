@@ -53,14 +53,9 @@
     "formidable": "^1.2.2",
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
-<<<<<<< HEAD
-    "lodash": "^4.17.15",
-    "mongoose": "^5.9.7",
-=======
     "lodash": "^4.17.19",
     "mongodb": "^3.0.7",
     "mongoose": "^5.9.20",
->>>>>>> c4274c2fc88079fb3662cd312616762662bd1a5f
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.20",
