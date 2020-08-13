@@ -20,6 +20,7 @@ const Menu = withRouter(({history}) => (
       <Typography variant="h6" color="inherit">
         Routine Maker
       </Typography>
+      
       <Link to="/">
         <IconButton aria-label="Home" style={isActive(history, "/")}>
           <HomeIcon/>
@@ -39,6 +40,9 @@ const Menu = withRouter(({history}) => (
       }
       {
         auth.isAuthenticated() && (<span>
+          <Link to={"/routines/" + auth.isAuthenticated().user._id}>
+            <Button style={isActive(history, "/routines/" + auth.isAuthenticated().user._id)}>My Routines</Button>
+          </Link>
           <Link to={"/user/" + auth.isAuthenticated().user._id}>
             <Button style={isActive(history, "/user/" + auth.isAuthenticated().user._id)}>My Profile</Button>
           </Link>
