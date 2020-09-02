@@ -23,16 +23,16 @@ const useStyles = makeStyles(theme => ({
     minHeight: 330
   }
 }))
-export default function Newsfeed () {
+export default function Routines () {
   const classes = useStyles()
-  const [posts, setPosts] = useState([])
+  const [routines, setRoutines] = useState([])
   const jwt = auth.isAuthenticated()
 
   useEffect(() => {
     const abortController = new AbortController()
     const signal = abortController.signal
 
-    listNewsFeed({
+    listRoutines({
       userId: jwt.user._id
     }, {
       t: jwt.token
@@ -48,18 +48,6 @@ export default function Newsfeed () {
     }
 
   }, [])
-
-  const addPost = (post) => {
-    const updatedPosts = [...posts]
-    updatedPosts.unshift(post)
-    setPosts(updatedPosts)
-  }
-  const removePost = (post) => {
-    const updatedPosts = [...posts]
-    const index = updatedPosts.indexOf(post)
-    updatedPosts.splice(index, 1)
-    setPosts(updatedPosts)
-  }
 
     return (
       <Card className={classes.card}>
