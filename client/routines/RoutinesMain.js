@@ -64,12 +64,11 @@ export default function Newsfeed () {
     return (
       <Card className={classes.card}>
         <Typography type="title" className={classes.title}>
-          Newsfeed
+          Routines
         </Typography>
         <Divider/>
-        <NewPost addUpdate={addPost}/>
         <Divider/>
-        <PostList removeUpdate={removePost} posts={posts}/>
+        <RoutinesList routines={routines}/>
       </Card>
     )
 }
