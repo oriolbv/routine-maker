@@ -40,7 +40,7 @@ export default function Routines () {
       if (data.error) {
         console.log(data.error)
       } else {
-        setPosts(data)
+        setLists(data)
       }
     })
     return function cleanup(){
