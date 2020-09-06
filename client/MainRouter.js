@@ -7,6 +7,7 @@ import Signin from './auth/Signin'
 import EditProfile from './user/EditProfile'
 import Profile from './user/Profile'
 import PrivateRoute from './auth/PrivateRoute'
+import Routines from './routines/RoutinesMain'
 import Menu from './core/Menu'
 
 const MainRouter = () => {
