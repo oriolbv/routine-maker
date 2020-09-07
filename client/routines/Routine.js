@@ -15,8 +15,6 @@ import Divider from '@material-ui/core/Divider'
 import PropTypes from 'prop-types'
 import {makeStyles} from '@material-ui/core/styles'
 import {Link} from 'react-router-dom'
-import {remove, like, unlike} from './api-post.js'
-import Comments from './Comments'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -61,44 +59,16 @@ export default function Routine (props){
     likes: props.post.likes.length,
     comments: props.post.comments
   })
-  
-  // useEffect(() => {
-  //   setValues({...values, like:checkLike(props.post.likes), likes: props.post.likes.length, comments: props.post.comments})
-  // }, [])
+
 
   
 
   const clickLike = () => {
-    let callApi = values.like ? unlike : like
-    callApi({
-      userId: jwt.user._id
-    }, {
-      t: jwt.token
-    }, props.post._id).then((data) => {
-      if (data.error) {
-        console.log(data.error)
-      } else {
-        setValues({...values, like: !values.like, likes: data.likes.length})
-      }
-    })
+    
   }
 
-  const updateComments = (comments) => {
-    setValues({...values, comments: comments})
-  }
-
-  const deletePost = () => {   
-    remove({
-      postId: props.post._id
-    }, {
-      t: jwt.token
-    }).then((data) => {
-      if (data.error) {
-        console.log(data.error)
-      } else {
-        props.onRemove(props.post)
-      }
-    })
+  const deleteRoutine = () => {   
+    
   }
 
     return (
@@ -108,7 +78,7 @@ export default function Routine (props){
               <Avatar src={'/api/users/photo/'+props.post.postedBy._id}/>
             }
             action={props.post.postedBy._id === auth.isAuthenticated().user._id &&
-              <IconButton onClick={deletePost}>
+              <IconButton onClick={deleteRoutine}>
                 <DeleteIcon />
               </IconButton>
             }
@@ -118,36 +88,19 @@ export default function Routine (props){
           />
         <CardContent className={classes.cardContent}>
           <Typography component="p" className={classes.text}>
-            {props.post.text}
+            {props.routine.text}
           </Typography>
-          {props.post.photo &&
-            (<div className={classes.photo}>
-              <img
-                className={classes.media}
-                src={'/api/posts/photo/'+props.post._id}
-                />
-            </div>)}
         </CardContent>
         <CardActions>
-          { values.like
-            ? <IconButton onClick={clickLike} className={classes.button} aria-label="Like" color="secondary">
-                <FavoriteIcon />
-              </IconButton>
-            : <IconButton onClick={clickLike} className={classes.button} aria-label="Unlike" color="secondary">
-                <FavoriteBorderIcon />
-              </IconButton> } <span>{values.likes}</span>
-              <IconButton className={classes.button} aria-label="Comment" color="secondary">
-                <CommentIcon/>
-              </IconButton> <span>{values.comments.length}</span>
+              Routine
         </CardActions>
         <Divider/>
-        <Comments postId={props.post._id} comments={values.comments} updateComments={updateComments}/>
       </Card>
     )
   
 }
 
-Post.propTypes = {
-  post: PropTypes.object.isRequired,
+Routine.propTypes = {
+  routine: PropTypes.object.isRequired,
   onRemove: PropTypes.func.isRequired
 }

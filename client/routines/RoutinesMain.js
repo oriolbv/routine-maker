@@ -5,8 +5,6 @@ import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import auth from './../auth/auth-helper'
 import RoutinesList from './RoutinesList'
-import {listNewsFeed} from './api-post.js'
-import NewPost from './NewPost'
 
 const useStyles = makeStyles(theme => ({
   card: {
