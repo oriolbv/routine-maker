@@ -55,6 +55,10 @@ export default function Routines () {
         </Typography>
         <Divider/>
         <Divider/>
+        <Link to="/new">
+            <Button style={isActive(history, "/new")}>New routine
+            </Button>
+          </Link>
         <RoutinesList routines={routines}/>
       </Card>
     )

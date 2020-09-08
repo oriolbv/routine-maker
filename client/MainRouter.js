@@ -8,6 +8,7 @@ import EditProfile from './user/EditProfile'
 import Profile from './user/Profile'
 import PrivateRoute from './auth/PrivateRoute'
 import Routines from './routines/RoutinesMain'
+import RoutinesCreate from './routines/RoutinesCreate'
 import Menu from './core/Menu'
 
 const MainRouter = () => {
@@ -22,6 +23,7 @@ const MainRouter = () => {
         <Route path="/user/:userId" component={Profile}/>
 
         <Route path="/routines" component={Routines}/>
+        <Route path="/routines/create" component={RoutinesCreate}/>
       </Switch>
     </div>)
 }
