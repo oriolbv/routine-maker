@@ -4,3 +4,7 @@
 # Routine Maker
 
 Simple sport routine manager using MERN Stack (MongoDB, Express, React & Node.js).
+
+Run the application with:
+
+``` npm run development ```
