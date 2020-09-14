@@ -4,8 +4,15 @@ import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import auth from './../auth/auth-helper'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import Icon from '@material-ui/core/Icon'
 import RoutinesList from './RoutinesList'
 import {listRoutines} from './api-routines.js'
+import RoutinesCreate from './RoutinesCreate'
+import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -54,10 +61,10 @@ export default function Routines () {
           Routines
         </Typography>
         <Divider/>
+        <RoutinesCreate/>
         <Divider/>
         <Link to="/new">
-            <Button style={isActive(history, "/new")}>New routine
-            </Button>
+            <Button>New routine</Button>
           </Link>
         <RoutinesList routines={routines}/>
       </Card>
