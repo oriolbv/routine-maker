@@ -60,10 +60,10 @@ export default function Routines () {
         <Typography type="title" className={classes.title}>
           Routines
         </Typography>
-        <Divider/>
+        {/* <Divider/>
         <RoutinesCreate/>
-        <Divider/>
-        <Link to="/new">
+        <Divider/> */}
+        <Link to="/create">
             <Button>New routine</Button>
           </Link>
         <RoutinesList routines={routines}/>
