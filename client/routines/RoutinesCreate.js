@@ -6,14 +6,7 @@ import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
-import Typography from '@material-ui/core/Typography'
-import Avatar from '@material-ui/core/Avatar'
-import Icon from '@material-ui/core/Icon'
-import PropTypes from 'prop-types'
 import {create} from './api-routines.js'
-import IconButton from '@material-ui/core/IconButton'
-import PhotoCamera from '@material-ui/icons/PhotoCamera'
 
 
 
@@ -93,6 +86,7 @@ export default function RoutinesCreate (props) {
     }
     return (<div className={classes.root}>
         <Card className={classes.card}>
+          holaaaa
         <CardHeader
               title={values.user.name}
               className={classes.cardHeader}
