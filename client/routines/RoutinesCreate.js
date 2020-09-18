@@ -86,7 +86,7 @@ export default function RoutinesCreate (props) {
     }
     return (<div className={classes.root}>
         <Card className={classes.card}>
-          holaaaa
+          Create Routine
         <CardHeader
               title={values.user.name}
               className={classes.cardHeader}
