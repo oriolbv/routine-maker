@@ -92,7 +92,16 @@ export default function RoutinesCreate (props) {
               className={classes.cardHeader}
             />
         <CardContent className={classes.cardContent}>
-          
+        
+        <input
+          type="text"
+        />
+        <input
+          type="text"
+        />
+        <input
+          type="text"
+        />
         </CardContent>
         <CardActions>
           <Button color="primary" variant="contained" disabled={values.name === ''} onClick={clickRoutine} className={classes.submit}>Create Routine</Button>
